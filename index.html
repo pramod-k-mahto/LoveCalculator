@@ -4,148 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoveCalculator</title>
-    <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
-
-        #main{
-            background-color: rgb(173, 113, 113);
-            background-image: url("https://cutewallpaper.org/21/3d-love-hart-wallpaper/3D-Love-Hearts-Wallpapers0-Heart-wallpaper-Love-wallpaper-.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-
-            height: 100%;
-            width: 100%;
-            position: absolute;
-
-
-
-            color: white;
-            font-size: 60px;
-            margin: 3px;
-        }
-        #parent{
-            position: absolute;
-            top: 10%;
-            left: 25%;
-
-        }
-        
-
-        #subparent{
-        position: absolute;
-        position: absolute;
-        top: 20%;
-        left: 31%;
-        height: 300px;
-        width: 300px;
-         
-        
-        background-size: contain;
-    background-repeat: no-repeat;
-
-
-        
-        }
-        img{
-            height: 200px;
-            width: 200px;
-        }
-        #btn{
-            position: absolute;
-            left: 45%;
-            top: 95%;
-            background-color: rgb(237, 72, 72,0.4);
-            width: 200px;
-            height: 30px;
-            color: white;
-            border-radius: 20px;
-            border: 0px;
-
-
-
-        }
-        input{
-            height: 30px;
-            border-radius: 20px;
-             padding: 5px;
-            background-color: rgb(247, 142, 142,0);
-            border: 0px;
-            width: 250px;
-            border: 5px solid rgb(220, 112, 112,0.3);
-            color: rgb(243, 234, 234);
-            font-size: 25px;
-            
-        }
-        #loveVal{
-            display: inline-block;
-            position: absolute;
-            top: 30%;
-            left: 52%;
-            background-color: rgb(220, 114, 114,0);
-            color: white;
-            height: 100px;
-            width: 100px;
-            font-size: 100px;
-            
-            
-
-        }
-        h1{
-            position: absolute;
-            left: 20vw;
-            color: white;
-            font-size: 60px;
-            margin: 3px;
-        }
-        h1 img{
-            height: 50px;
-            width: 50px;
-        }
-        #parent img{
-            
-            height: 65px;
-            width: 65px;
-            margin-top: 35px;
-
-        }
-
-    </style>
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main">
-        <h1> LOVE <img src="https://i.pinimg.com/originals/ff/fe/b8/fffeb8a9e1cc28a197c60835d32542da.png" alt=""> CALCULATOR</h1>
-        <audio src="">
-            <source src="" type="">
-        </audio>
-
-<div id="love">
-    <div id="parent">
-
-        <input type="text" name="" id="" placeholder="YOUR NAME" >
-        <img src="https://i.pinimg.com/originals/ff/fe/b8/fffeb8a9e1cc28a197c60835d32542da.png" alt="">
-        <input type="text" name="" id="" placeholder="LOVE NAME">
-
+    <div id="love-calculator">
+        <h1>LOVE <img src="https://i.pinimg.com/originals/ff/fe/b8/fffeb8a9e1cc28a197c60835d32542da.png" alt="Love"> CALCULATOR</h1>
+        <div id="inputs">
+            <input type="text" id="your-name" placeholder="Your Name">
+            <img src="https://i.pinimg.com/originals/ff/fe/b8/fffeb8a9e1cc28a197c60835d32542da.png" alt="Love" style="height: 20px;">
+            <input type="text" id="love-name" placeholder="Love Name">
         </div>
-        <div id="subparent">
-            <p id="loveVal"></p>
-
-        <button id="btn" onclick="cal()">LOVE CHECK</button>
-        </div>
+        <button id="btn" onclick="calculateLove()">Calculate Love</button>
+        <p id="love-value"></p>
     </div>
-
-</div>
-    <script>
-
-    function cal(){
-        let love= Math.floor(Math.random()*100 )
-        let loveVal=document.getElementById("loveVal").innerText=love+"%"
-    }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
